@@ -1,1 +1,3 @@
-let products = []
+let products = [];
+
+let productsDestaque = [];
