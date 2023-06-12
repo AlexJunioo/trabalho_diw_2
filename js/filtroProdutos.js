@@ -110,13 +110,13 @@ function filtrar(dados) {
 }
 
 function buscarNoServidor() {
-    fetch('https://diwserver.vps.webdock.cloud/products?page=100&page_items=12')
+    fetch('https://diwserver.vps.webdock.cloud/products?page=100&page_items=')
         .then(response => response.json())
         .then(dados => carregarProduto(dados.products))
 }
 
 function buscarNoServidorDestaque() {
-    fetch('https://diwserver.vps.webdock.cloud/products?page=10&page_items=4')
+    fetch('https://diwserver.vps.webdock.cloud/products?page=10&page_items=3')
         .then(response => response.json())
         .then(dadosDestaque => carregarProdutoDestaque(dadosDestaque.products))
 }
