@@ -1,11 +1,11 @@
-<!doctype html>
+<!DOCTYPE html>
 <html lang="pt-br">
 
 <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css" rel="stylesheet">
-    <link rel="stylesheet" href="/styles.css">
+    <link rel="stylesheet" href="/css/styles.css">
     <link href="https://getbootstrap.com/docs/5.3/assets/css/docs.css" rel="stylesheet">
     <title>Trabalho de DIW</title>
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.bundle.min.js"></script>
@@ -24,7 +24,7 @@
                 <ul class="navbar-nav d-flex align-items-center">
                     <li class="nav-item">
                         <div class="d-flex flex-row">
-                            <img src="/imagens/logo.jpg" class="rounded-circle" width="30">
+                            <img src="/imagens/Ax & Press.png" class="rounded-circle" width="30">
                         </div>
                     </li>
                     <li class="nav-item">
@@ -39,15 +39,15 @@
             <div class="container-fluid">
                 <div class="row p-2 pt-3 pb-3 d-flex align-items-center">
                     <div class="col-md-2">
-                        <img class="d-none d-md-flex" src="/imagens/logo.jpg" width="150">
+                        <img class="d-none d-md-flex" src="/imagens/Ax & Press.png" width="150">
                     </div>
                     <div class="col-md-8">
                         <div class="d-flex form-inputs">
-                            <input class="form-control" type="text" placeholder="Busque o seu Produto">
+                            <input class="form-control" type="text" placeholder="Busque o seu Produto" id="nomeProdutoFiltro">
                             <i class="bx bx-search"></i>
                         </div>
                         <div class="button">
-                            <button type="button" class="btn btn-primary">Buscar</button>
+                            <button type="button" class="btn btn-primary" id="botaoFiltro" onclick="filtro()" >Buscar</button>
                         </div>
                     </div>
 
@@ -176,202 +176,27 @@
                 </div>
             </div>
 
-            <div class="row">
-                <div class="col-sm-9">
-                    <div class="produtos">
-                        <div class="row row-cols-1 row-cols-md-3 g-4">
-                            <div class="col">
-                                <div class="card h-100">
-                                    <img src="/imagens/equipamento-1.jpg" class="card-img-top" alt="...">
-                                    <div class="card-body">
-                                        <p class="card-text"><a href="#">Fone Gamer</a></p>
-                                        <p class="card-text">R$ 99,99</p>
-                                    </div>
-                                </div>
-                            </div>
-                            <div class="col">
-                                <div class="card h-100">
-                                    <img src="/imagens/equipamento-2.jpg" class="card-img-top" alt="...">
-                                    <div class="card-body">
-                                        <p class="card-text"><a href="#">Controle PS3</a></p>
-                                        <p class="card-text">R$ 99,99</p>
-                                    </div>
-                                </div>
-                            </div>
-                            <div class="col">
-                                <div class="card h-100">
-                                    <img src="/imagens/3.jpg" class="card-img-top" alt="...">
-                                    <div class="card-body">
-                                        <p class="card-text"><a href="#">Monitor 144hz</a></p>
-                                        <p class="card-text">R$ 99,99</p>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
+            <div class="container-fluid" >
+                <div class="row">
+                  <div  class="col-md-9 col-sm-12">
+                    <div class="container-fluid" >
+                      <h3 id="nomeProdutoFiltro" class="mx-2 my-1 p-2"></h3>
+                      <div class="row" id="principal">
+                      
+                      </div>
                     </div>
-                    <div class="produtos">
-                        <div class="row row-cols-1 row-cols-md-3 g-4">
-                            <div class="col">
-                                <div class="card h-100">
-                                    <img src="/imagens/equipamento-4.jpg" class="card-img-top" alt="...">
-                                    <div class="card-body">
-                                        <p class="card-text"><a href="#">Notebook Gamer</a></p>
-                                        <p class="card-text">R$ 99,99</p>
-                                    </div>
-                                </div>
-                            </div>
-                            <div class="col">
-                                <div class="card h-100">
-                                    <img src="/imagens/equipamento-5.jpg" class="card-img-top" alt="...">
-                                    <div class="card-body">
-                                        <p class="card-text"><a href="#">Mouse Gamer</a></p>
-                                        <p class="card-text">R$ 99,99</p>
-                                    </div>
-                                </div>
-                            </div>
-                            <div class="col">
-                                <div class="card h-100">
-                                    <img src="/imagens/equipamento-6.jpg" class="card-img-top" alt="...">
-                                    <div class="card-body">
-                                        <p class="card-text"><a href="#">Computador Gamer Completo</a></p>
-                                        <p class="card-text">R$ 99,99</p>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="produtos">
-                        <div class="row row-cols-1 row-cols-md-3 g-4">
-                            <div class="col">
-                                <div class="card h-100">
-                                    <img src="/imagens/equipamento-7.jpg" class="card-img-top" alt="...">
-                                    <div class="card-body">
-                                        <p class="card-text"> <a href="#">Placa de Video </a>
-                                        <p class="card-text">R$ 99,99</p>
-                                        </p>
-                                    </div>
-                                </div>
-                            </div>
-                            <div class="col">
-                                <div class="card h-100">
-                                    <img src="/imagens/equipamento-8.jpg" class="card-img-top" alt="...">
-                                    <div class="card-body">
-                                        <p class="card-text"><a href="#">Drone</a></p>
-                                        <p class="card-text">R$ 99,99</p>
-                                    </div>
-                                </div>
-                            </div>
-                            <div class="col">
-                                <div class="card h-100">
-                                    <img src="/imagens/equipamento-9.jpg" class="card-img-top" alt="...">
-                                    <div class="card-body">
-                                        <p class="card-text"><a href="#">Cadeira Gamer</a></p>
-                                        <p class="card-text">R$ 99,99</p>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
+          
+                  </div>
+                  <div id="lateral" class="col-md-3 col-sm-12">
+                    <aside class="card mx-2 my-1 p-2 w-100 h-100 text-center" >
+                      <div>
+                        <h1> Não encontrou seu Produto? <h1>
+                        <button type="button" class="mt-5 btn-lg btn btn-warning mb-2" onclick="window.location.href='cadastro.html'">Cadastre aqui!</button>
+                      </div>
+                    </aside>    
+                  </div>
                 </div>
-                <div class="col-sm-3">
-                    <div class="destaque">
-                        <h3>Produtos destaques</h3>
-                        <div class="card mb-3">
-                            <div class="row g-0">
-                                <div class="col-md-6">
-                                    <img src="/imagens/equipamento-1.jpg" class="img-fluid rounded-start" alt="...">
-                                </div>
-                                <div class="col-md-6">
-                                    <div class="card-body">
-                                        <div class="card-text">
-                                            <p><a href="#">Produto</a></p>
-                                            <P>R$ 99,99</P>
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="card mb-3">
-                            <div class="row g-0">
-                                <div class="col-md-6">
-                                    <img src="/imagens/equipamento-1.jpg" class="img-fluid rounded-start" alt="...">
-                                </div>
-                                <div class="col-md-6">
-                                    <div class="card-body">
-                                        <div class="card-text">
-                                            <p><a href="#">Produto</a></p>
-                                            <P>R$ 99,99</P>
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="card mb-3">
-
-                            <div class="row g-0">
-                                <div class="col-md-6">
-                                    <img src="/imagens/equipamento-1.jpg" class="img-fluid rounded-start" alt="...">
-                                </div>
-                                <div class="col-md-6">
-                                    <div class="card-body">
-                                        <div class="card-text">
-                                            <p><a href="#">Produto</a></p>
-                                            <P>R$ 99,99</P>
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="card mb-3">
-
-                            <div class="row g-0">
-                                <div class="col-md-6">
-                                    <img src="/imagens/equipamento-1.jpg" class="img-fluid rounded-start" alt="...">
-                                </div>
-                                <div class="col-md-6">
-                                    <div class="card-body">
-                                        <div class="card-text">
-                                            <p><a href="#">Produto</a></p>
-                                            <P>R$ 99,99</P>
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="card mb-3">
-
-                            <div class="row g-0">
-                                <div class="col-md-6">
-                                    <img src="/imagens/equipamento-1.jpg" class="img-fluid rounded-start" alt="...">
-                                </div>
-                                <div class="col-md-6">
-                                    <div class="card-body">
-                                        <div class="card-text">
-                                            <p><a href="#">Produto</a></p>
-                                            <P>R$ 99,99</P>
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="newsletter">
-                        <div class="pesquisar">
-                            <h6>NewsLetter</h6>
-                            <p>Inscreva-se</p>
-                            <div class="col-md-11">
-                                <div class="d-flex form-inputs">
-                                    <input type="email" class="form-control" id="exampleFormControlInput1"
-                                        placeholder="nome@example.com">
-                                </div>
-                            </div>
-                            <div class="button">
-                                <button type="button" class="btn btn-secondary">Inscrever</button>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </div>
+              </div> 
         </main>
 
         <div class="footer">
@@ -447,6 +272,9 @@
                 </footer>
             </div>
         </div>
+
+        <script src="/js/filtroProdutos.js"></script>
+        <script src="/js/dados.js"></script>
 </body>
 
 </html>
